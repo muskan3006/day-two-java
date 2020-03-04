@@ -40,12 +40,13 @@ public class AllFunctions extends Const {
      * @param listOfStudents a list containing objects of Student class
      * @param name           a String that has your name
      * @return a list of Student that doesn't has a secondary address and also the name of the student starts with
-     * initial letter of name.
+     *     initial letter of name.
      */
     List<Student> getStudentsWithoutSecondaryAddressAndNameInitial(List<Student> listOfStudents, String name) {
         return listOfStudents
                 .stream()
-                .filter(student -> !student.address.secondaryAddress.isPresent() && (student.name.toLowerCase().charAt(0) == name.toLowerCase().charAt(0)))
+                .filter(student -> !student.address.secondaryAddress.isPresent()
+                        && (student.name.toLowerCase().charAt(0) == name.toLowerCase().charAt(0)))
                 .collect(Collectors.toList());
     }
 
@@ -65,13 +66,16 @@ public class AllFunctions extends Const {
             if (birthDay < 10) {
                 return IntStream
                         .range(birthYear, currentYear)
-                        .mapToObj(year -> LocalDate.parse(year + "-0" + birthMonth + "-0" + birthDay).getDayOfWeek().toString())
+                        .mapToObj(year -> LocalDate.parse(year + "-0" + birthMonth + "-0" + birthDay).getDayOfWeek()
+                                .toString())
                         .collect(Collectors.toList());
 
             } else {
                 return IntStream
                         .range(birthYear, currentYear)
-                        .mapToObj(year -> LocalDate.parse(year + "-0" + birthMonth + "-" + birthDay).getDayOfWeek().toString())
+                        .mapToObj(year -> LocalDate.parse(year + "-0" + birthMonth + "-" + birthDay)
+                                .getDayOfWeek()
+                                .toString())
                         .collect(Collectors.toList());
 
             }
@@ -79,13 +83,17 @@ public class AllFunctions extends Const {
             if (birthDay < 10) {
                 return IntStream
                         .range(birthYear, currentYear)
-                        .mapToObj(year -> LocalDate.parse(year + "-" + birthMonth + "-0" + birthDay).getDayOfWeek().toString())
+                        .mapToObj(year -> LocalDate.parse(year + "-" + birthMonth + "-0" + birthDay)
+                                .getDayOfWeek()
+                                .toString())
                         .collect(Collectors.toList());
 
             } else {
                 return IntStream
                         .range(birthYear, currentYear)
-                        .mapToObj(year -> LocalDate.parse(year + "-" + birthMonth + "-" + birthDay).getDayOfWeek().toString())
+                        .mapToObj(year -> LocalDate.parse(year + "-" + birthMonth + "-" + birthDay)
+                                .getDayOfWeek()
+                                .toString())
                         .collect(Collectors.toList());
 
             }

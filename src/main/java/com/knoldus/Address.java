@@ -18,9 +18,11 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "primaryAddress='" + primaryAddress + '\'' +
-                ", secondaryAddress=" + secondaryAddress +
-                '}';
+        return "Address{"
+                + "primaryAddress='"
+                + primaryAddress + '\''
+                + ", secondaryAddress="
+                + secondaryAddress
+                + '}';
     }
 }
