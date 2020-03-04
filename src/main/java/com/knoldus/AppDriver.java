@@ -4,7 +4,16 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.knoldus.Const.*;
+import static com.knoldus.Const.monthOfBirth;
+import static com.knoldus.Const.yearOfBirth;
+import static com.knoldus.Const.dayOfBirth;
+import static com.knoldus.Const.timeZone;
+import static com.knoldus.Const.yearOfDeath;
+import static com.knoldus.Const.monthOfDeath;
+import static com.knoldus.Const.dayOfDeath;
+import static com.knoldus.Const.name;
+import static com.knoldus.Const.nameOfFile;
+
 
 public class AppDriver {
     public static void main(String[] args) {
@@ -23,10 +32,14 @@ public class AppDriver {
         LocalDate birthDay = LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth);
         System.out.println("Assignment-2" + functionUser.getBirthDateDayOfWeek(birthDay));
 
-        System.out.println(functionUser.getLeapYearsAfterRepublicDay());
-        System.out.println(functionUser.getSecondsManLived(birthDay, LocalDate.of(1998, 12, 31)));
-        System.out.println(functionUser.getTimeFromTimeZone(timeZone));
-        System.out.println(functionUser.wordCountInFile(nameOfFile));
+        System.out.println("Assignment-3" + functionUser.getTimeFromTimeZone(timeZone));
+
+        System.out.println("Assignment -4"
+                + functionUser.getSecondsManLived(birthDay, LocalDate.of(yearOfDeath, monthOfDeath, dayOfDeath)));
+
+        System.out.println("Assignment-5" + functionUser.getLeapYearsAfterRepublicDay());
+
+        System.out.println("Assignment-6" + functionUser.wordCountInFile(nameOfFile));
     }
 
 

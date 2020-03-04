@@ -9,4 +9,8 @@ public class Const {
     static final int dayOfBirth = 30;
     static final String name = "Muskan";
     static final String nameOfFile = "/home/knoldus/workspace/day-two-java/src/main/resources/Demo.txt";
+    static final int yearOfDeath = 2047;
+    static final int monthOfDeath = 11;
+    static final int dayOfDeath = 14;
+
 }

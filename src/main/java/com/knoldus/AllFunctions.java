@@ -15,9 +15,11 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static com.knoldus.Const.firstDay;
+import static com.knoldus.Const.yearOfRepublicDay;
 import static java.time.ZoneOffset.UTC;
 
-public class AllFunctions extends Const {
+public class AllFunctions {
     /**
      * getStudentsWithoutSecondaryAddress method gives the solution for the first part of Assignment-1.
      * In this a list of students is analysed and a list is returned of the users who don't have a secondary address.
