@@ -4,11 +4,11 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-public class AppDriver extends Const {
+import static com.knoldus.Const.*;
+
+public class AppDriver {
     public static void main(String[] args) {
-        AllFunctions a = new AllFunctions();
-        LocalDate birthDay = LocalDate.of(1998, 12, 30);
-        System.out.println(a.getBirthDateDayOfWeek(birthDay));
+        AllFunctions functionUser = new AllFunctions();
         List<Student> listOfStudents = Arrays.asList(
                 new Student(1, "Pushkar", 20, new Address("Delhi", "Sarita Vihar")),
                 new Student(2, "Alice", 26, new Address("Dehradun")),
@@ -16,13 +16,17 @@ public class AppDriver extends Const {
                 new Student(7, "Shivam", 21, new Address("Mumbai", "Sarita Vihar")),
                 new Student(8, "Malice", 22, new Address("Kolkata", "Noida")),
                 new Student(9, "Merry", 18, new Address("Chennai")));
-        System.out.println(a.getStudentsWithoutSecondaryAddress(listOfStudents));
-        String name = "Muskan";
-        System.out.println(a.getStudentsWithoutSecondaryAddressAndNameInitial(listOfStudents, name));
-        System.out.println(a.getLeapYearsAfterRepublicDay());
-        System.out.println(a.getSecondsManLived(birthDay, LocalDate.of(1998, 12, 31)));
-        System.out.println(a.getTimeFromTimeZone(timeZone));
-        System.out.println(a.wordCountInFile("/home/knoldus/workspace/day-two-java/src/main/resources/Demo.txt"));
+        System.out.println("Assignment-1 Part-1" + functionUser.getStudentsWithoutSecondaryAddress(listOfStudents));
+        System.out.println("Assignment-1 Part-2"
+                + functionUser.getStudentsWithoutSecondaryAddressAndNameInitial(listOfStudents, name));
+
+        LocalDate birthDay = LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth);
+        System.out.println("Assignment-2" + functionUser.getBirthDateDayOfWeek(birthDay));
+
+        System.out.println(functionUser.getLeapYearsAfterRepublicDay());
+        System.out.println(functionUser.getSecondsManLived(birthDay, LocalDate.of(1998, 12, 31)));
+        System.out.println(functionUser.getTimeFromTimeZone(timeZone));
+        System.out.println(functionUser.wordCountInFile(nameOfFile));
     }
 
 
